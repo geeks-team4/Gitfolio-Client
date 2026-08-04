@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  background: #0a0a0a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.app-shell {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.app-shell {
+  height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  overflow: hidden;
+}
+
+.design-frame {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: #0a0a0a;
+}
+
+.app-sidebar {
+  position: relative;
+  width: 232px;
+  height: 100vh;
+  flex: 0 0 232px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  border-right: 1px solid rgba(255,255,255,.08);
+  background: #111;
+  color: #fafafa;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+
+.app-logo,
+.app-nav button,
+.app-profile {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.app-logo {
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  background: transparent;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.app-logo img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.app-nav { display: flex; flex-direction: column; gap: 4px; }
+
+.app-nav button {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: transparent;
+  color: #a3a3a3;
+  text-align: left;
+  font-size: 14px;
+}
+
+.app-nav button:hover { color: #fafafa; background: rgba(255,255,255,.04); }
+.app-nav button.is-active { color: #fafafa; background: rgba(255,255,255,.08); font-weight: 700; }
+
+.app-profile {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 12px 10px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  background: transparent;
+  color: #fafafa;
+  font-size: 13px;
+}
+
+.app-profile > :first-child {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fafafa;
+  color: #0a0a0a;
+  font-size: 12px;
+  font-weight: 800;
+}

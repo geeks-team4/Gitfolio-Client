@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gitfolio</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>body{margin:0;background:#0a0b0d;word-break:keep-all;overflow-wrap:break-word;} a{color:#22c55e;text-decoration:none;} a:hover{color:#4ade80;}</style>
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+<div style="font-family:Pretendard,-apple-system,sans-serif;background:#0a0b0d;color:#f2f3f5;min-height:100vh;display:flex;">
+  <aside style="width:232px;flex-shrink:0;background:#0e0f12;border-right:1px solid rgba(255,255,255,0.08);padding:24px 16px;display:flex;flex-direction:column;gap:4px;">
+    <div style="font-size:18px;font-weight:800;padding:8px 12px;margin-bottom:16px;">Gitfolio</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;">대시보드</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;">저장소</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;">타임라인</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;">트러블슈팅</div>
+    <div style="background:rgba(34,197,94,0.12);color:#22c55e;font-weight:700;font-size:14px;padding:10px 12px;border-radius:8px;">회고</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;">내보내기</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;">결제/이용내역</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;">설정</div>
+    <div style="margin-top:auto;display:flex;align-items:center;gap:10px;padding:10px 12px;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+      <div style="width:28px;height:28px;border-radius:50%;background:#22c55e;flex-shrink:0;"></div>
+      <div style="font-size:13px;">yuna-kim</div>
+    </div>
+  </aside>
+
+  <main style="flex:1;padding:40px 48px;max-width:1000px;">
+    <h1 style="font-size:24px;font-weight:800;margin:0 0 6px;">프로젝트 회고 생성</h1>
+    <div style="font-size:14px;color:#9aa1ac;margin-bottom:32px;">선택 기능이에요. 생성하지 않아도 커밋 분석과 타임라인은 그대로 이용할 수 있어요.</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:28px;">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#9aa1ac;margin-bottom:14px;">생성 형식 선택</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px;">
+          <label style="display:flex;align-items:center;gap:10px;background:rgba(34,197,94,0.1);border:1px solid #22c55e;border-radius:10px;padding:14px 16px;font-size:14px;"><input type="radio" checked style="accent-color:#22c55e;">상세 개발 회고</label>
+          <label style="display:flex;align-items:center;gap:10px;background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;font-size:14px;color:#9aa1ac;"><input type="radio" style="accent-color:#22c55e;">포트폴리오 작성용 초안</label>
+          <label style="display:flex;align-items:center;gap:10px;background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;font-size:14px;color:#9aa1ac;"><input type="radio" style="accent-color:#22c55e;">README 초안</label>
+          <label style="display:flex;align-items:center;gap:10px;background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;font-size:14px;color:#9aa1ac;"><input type="radio" style="accent-color:#22c55e;">이력서용 프로젝트 요약</label>
+          <label style="display:flex;align-items:center;gap:10px;background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;font-size:14px;color:#9aa1ac;"><input type="radio" style="accent-color:#22c55e;">면접 준비 자료</label>
+          <label style="display:flex;align-items:center;gap:10px;background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;font-size:14px;color:#9aa1ac;"><input type="radio" style="accent-color:#22c55e;">기술 블로그 초안</label>
+        </div>
+        <button style="width:100%;background:#22c55e;color:#0a0b0d;border:none;border-radius:8px;padding:14px;font-size:14px;font-weight:700;cursor:pointer;">회고 생성하기</button>
+      </div>
+
+      <div style="background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:32px;">
+        <div style="font-size:12px;color:#6b7280;margin-bottom:6px;">gitfolio-web · 상세 개발 회고 (미리보기)</div>
+        <h2 style="font-size:19px;font-weight:800;margin:0 0 16px;">Gitfolio 웹 프론트엔드 개발 회고</h2>
+        <div style="font-size:14px;line-height:1.8;color:#c3c8cf;">
+          <p style="margin:0 0 14px;"><strong>개발 기간</strong> 2023년 2월 – 2024년 3월 (약 13개월)</p>
+          <p style="margin:0 0 14px;"><strong>주요 기능</strong> GitHub 저장소 연동, 커밋 단위 AI 분석, 기간별 개발 타임라인 시각화</p>
+          <p style="margin:0 0 14px;"><strong>기술적 문제</strong> 대용량 저장소에서 커밋 리스트 렌더링이 느려지는 문제가 있었고, 가상 스크롤을 도입해 해결했습니다.</p>
+          <p style="margin:0;"><strong>배운 점</strong> 상태 관리 구조를 초기에 충분히 설계하지 않아 중간에 재설계가 필요했습니다. 다시 개발한다면 데이터 흐름을 먼저 정의하고 시작할 것 같습니다.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="motion.js"></script>
+</body>
+</html>

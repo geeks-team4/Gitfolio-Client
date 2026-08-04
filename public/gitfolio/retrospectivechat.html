@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gitfolio</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>body{margin:0;background:#0a0a0a;word-break:keep-all;overflow-wrap:break-word;} a{color:#fafafa;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.3);} a:hover{color:#d4d4d4;} textarea{font-family:inherit;}</style>
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+<div style="font-family:Pretendard,-apple-system,sans-serif;background:#0a0a0a;color:#fafafa;min-height:100vh;display:flex;">
+  <aside style="width:232px;flex-shrink:0;background:#111111;border-right:1px solid rgba(255,255,255,0.08);padding:24px 16px;display:flex;flex-direction:column;gap:4px;">
+    <div style="font-size:18px;font-weight:800;padding:8px 12px;margin-bottom:16px;">Gitfolio</div>
+    <a href="dashboard.html" style="color:#a3a3a3;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;text-decoration:none;display:block;">대시보드</a>
+    <a href="repolist.html" style="color:#a3a3a3;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;text-decoration:none;display:block;">저장소</a>
+    <a href="timeline.html" style="color:#a3a3a3;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;text-decoration:none;display:block;">타임라인</a>
+    <a href="troubleshooting.html" style="color:#a3a3a3;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;text-decoration:none;display:block;">트러블슈팅</a>
+    <a href="retrospective.html" style="background:rgba(255,255,255,0.08);color:#fafafa;font-weight:700;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;text-decoration:none;display:block;">회고</a>
+    <a href="export.html" style="color:#a3a3a3;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;text-decoration:none;display:block;">내보내기</a>
+    <a href="settings.html" style="color:#a3a3a3;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;text-decoration:none;display:block;">설정</a>
+    <div style="margin-top:auto;display:flex;align-items:center;gap:10px;padding:10px 12px;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+      <div style="width:28px;height:28px;border-radius:50%;background:#fafafa;flex-shrink:0;"></div>
+      <div style="font-size:13px;">yuna-kim</div>
+    </div>
+  </aside>
+
+  <div style="flex:1;display:flex;">
+    <div style="width:52%;display:flex;flex-direction:column;border-right:1px solid rgba(255,255,255,0.08);">
+      <div style="padding:20px 32px;border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="font-size:13px;color:#737373;margin-bottom:4px;">gitfolio-web · 상세 개발 회고</div>
+        <div style="font-size:16px;font-weight:700;">몇 가지만 물어볼게요</div>
+      </div>
+
+      <div style="flex:1;overflow-y:auto;padding:28px 32px;display:flex;flex-direction:column;gap:20px;">
+
+        <div style="display:flex;gap:12px;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.10);color:#fafafa;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;">AI</div>
+          <div style="background:#171717;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.6;max-width:420px;">
+            2023년 5월, 로그인 기능을 구현하면서 커밋이 5번 반복됐어요. 이 기능에서 가장 어려웠던 부분은 무엇이었나요?
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;justify-content:flex-end;">
+          <div style="background:#fafafa;color:#0a0a0a;border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.6;max-width:420px;">
+            API 연결이 처음이라 인증 토큰을 언제 저장하고 갱신해야 하는지 감이 없어서 헤맸어요. 결국 리프레시 토큰 로직을 따로 공부해서 붙였습니다.
+          </div>
+          <div style="width:28px;height:28px;border-radius:50%;background:#fafafa;flex-shrink:0;"></div>
+        </div>
+
+        <div style="display:flex;gap:12px;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.10);color:#fafafa;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;">AI</div>
+          <div style="background:#171717;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.6;max-width:420px;">
+            좋아요, 반영했어요. 2023년 7월에 인증 토큰이 자주 만료되던 문제가 있었던 것 같은데, 실제로 어떤 오류가 발생했었는지 기억하시나요?
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;justify-content:flex-end;">
+          <div style="background:#fafafa;color:#0a0a0a;border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.6;max-width:420px;">
+            맞아요, 한동안 사용자들이 갑자기 로그아웃된다는 얘기를 들었어요. 401 에러였는데 처음엔 그냥 재로그인 처리만 하다가 나중에 토큰 자동 갱신으로 고쳤어요.
+          </div>
+          <div style="width:28px;height:28px;border-radius:50%;background:#fafafa;flex-shrink:0;"></div>
+        </div>
+
+        <div style="display:flex;gap:12px;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.10);color:#fafafa;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;">AI</div>
+          <div style="background:#171717;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.6;max-width:420px;">
+            트러블슈팅 항목에 반영했어요. 마지막으로, 지금 다시 이 프로젝트를 시작한다면 가장 먼저 바꾸고 싶은 부분이 있나요?
+          </div>
+        </div>
+
+      </div>
+
+      <div style="padding:20px 32px;border-top:1px solid rgba(255,255,255,0.08);display:flex;gap:10px;">
+        <input placeholder="답변을 입력해주세요..." style="flex:1;background:#171717;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px 16px;color:#fafafa;font-size:14px;font-family:inherit;">
+        <button style="background:transparent;color:#a3a3a3;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 18px;font-size:13px;cursor:pointer;">건너뛰기</button>
+        <button style="background:#fafafa;color:#0a0a0a;border:none;border-radius:8px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;">전송</button>
+      </div>
+    </div>
+
+    <div style="width:48%;display:flex;flex-direction:column;">
+      <div style="padding:20px 32px;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:16px;font-weight:700;">회고 미리보기</div>
+        <span style="background:rgba(255,255,255,0.10);color:#fafafa;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;white-space:nowrap;">답변에 따라 자동 반영</span>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:28px 32px;">
+        <h2 style="font-size:19px;font-weight:800;margin:0 0 20px;">Gitfolio 웹 프론트엔드 개발 회고</h2>
+
+        <div style="font-size:13px;color:#fafafa;font-weight:700;margin-bottom:8px;">담당 기능</div>
+        <p style="font-size:14px;color:#d4d4d4;line-height:1.8;margin:0 0 20px;">GitHub 저장소 연동, 로그인 및 인증, 커밋 단위 AI 분석 화면을 구현했습니다.</p>
+
+        <div style="font-size:13px;color:#fafafa;font-weight:700;margin-bottom:8px;">기술적 문제</div>
+        <p style="font-size:14px;color:#d4d4d4;line-height:1.8;margin:0 0 20px;">로그인 기능 구현 시 인증 토큰 저장과 갱신 시점을 처음에는 정확히 이해하지 못해 여러 번 수정했습니다. 이후 인증 토큰이 자주 만료되어 사용자가 갑자기 로그아웃되는 문제가 발생했습니다.</p>
+
+        <div style="font-size:13px;color:#fafafa;font-weight:700;margin-bottom:8px;">해결 과정</div>
+        <p style="font-size:14px;color:#d4d4d4;line-height:1.8;margin:0 0 20px;">리프레시 토큰 로직을 학습해 인증 흐름에 적용했습니다. 초기에는 401 에러 발생 시 단순 재로그인으로 처리했으나, 이후 토큰 자동 갱신 구조로 개선해 문제를 해결했습니다.</p>
+
+        <div style="font-size:13px;color:#737373;font-weight:700;margin-bottom:8px;">다시 개발한다면</div>
+        <p style="font-size:14px;color:#737373;line-height:1.8;margin:0;font-style:italic;">답변을 기다리고 있어요…</p>
+      </div>
+      <div style="padding:20px 32px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;">
+        <span style="font-size:13px;color:#737373;">질문 4 / 6 완료</span>
+        <button style="background:#fafafa;color:#0a0a0a;border:none;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:700;cursor:pointer;">지금까지 내용으로 완료하기</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="motion.js"></script>
+</body>
+</html>

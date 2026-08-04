@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gitfolio</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>body{margin:0;background:#0a0b0d;word-break:keep-all;overflow-wrap:break-word;} a{color:#22c55e;text-decoration:none;} a:hover{color:#4ade80;}</style>
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+<div style="font-family:Pretendard,-apple-system,sans-serif;background:#0a0b0d;color:#f2f3f5;min-height:100vh;display:flex;">
+  <aside style="width:232px;flex-shrink:0;background:#0e0f12;border-right:1px solid rgba(255,255,255,0.08);padding:24px 16px;display:flex;flex-direction:column;gap:4px;">
+    <div style="font-size:18px;font-weight:800;padding:8px 12px;margin-bottom:16px;">Gitfolio</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;">대시보드</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;">저장소</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;">타임라인</div>
+    <div style="background:rgba(34,197,94,0.12);color:#22c55e;font-weight:700;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;">트러블슈팅</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;">회고</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;">내보내기</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;">결제/이용내역</div>
+    <div style="color:#9aa1ac;font-size:14px;padding:10px 12px;border-radius:8px;white-space:nowrap;">설정</div>
+    <div style="margin-top:auto;display:flex;align-items:center;gap:10px;padding:10px 12px;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+      <div style="width:28px;height:28px;border-radius:50%;background:#22c55e;flex-shrink:0;"></div>
+      <div style="font-size:13px;">yuna-kim</div>
+    </div>
+  </aside>
+
+  <main style="flex:1;padding:40px 48px;max-width:900px;">
+    <h1 style="font-size:24px;font-weight:800;margin:0 0 6px;">트러블슈팅 복원</h1>
+    <div style="font-size:14px;color:#9aa1ac;margin-bottom:32px;">반복적으로 수정된 코드와 커밋 흐름을 분석해 문제 해결 과정을 추정했습니다</div>
+
+    <div style="background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px;margin-bottom:24px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+        <div style="font-weight:700;font-size:16px;">인증 토큰 만료 처리 문제</div>
+        <span style="background:rgba(245,158,11,0.15);color:#f59e0b;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;white-space:nowrap;">사용자 확인 필요</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:14px;line-height:1.7;">
+        <div><span style="color:#6b7280;">문제 상황 추정 — </span><span style="color:#c3c8cf;">로그인 후 일정 시간이 지나면 자동으로 로그아웃되는 문제가 있었던 것으로 보입니다.</span></div>
+        <div><span style="color:#6b7280;">발생 원인 추정 — </span><span style="color:#c3c8cf;">토큰 만료 시각을 확인하지 않고 API 응답의 401 코드만으로 처리했던 것으로 추정됩니다.</span></div>
+        <div><span style="color:#6b7280;">시도한 해결 방법 — </span><span style="color:#c3c8cf;">에러 로그를 추가하고 요청 재시도 로직을 넣은 커밋이 3건 발견됩니다.</span></div>
+        <div><span style="color:#6b7280;">최종 해결 방법 — </span><span style="color:#c3c8cf;">리프레시 토큰을 발급받아 자동 재발급하는 구조로 변경되었습니다.</span></div>
+      </div>
+      <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08);font-size:13px;color:#6b7280;">
+        관련 커밋: <a href="#">4b9e110</a>, <a href="#">7a2c918</a>, <a href="#">9d81a02</a>
+      </div>
+      <div style="margin-top:14px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:8px;padding:14px 16px;font-size:13px;color:#f5c56b;">
+        커밋 흐름을 보면 인증 만료 처리 문제를 해결한 것으로 추정됩니다. 실제 상황이 맞는지 확인해주세요.
+      </div>
+      <div style="display:flex;gap:8px;margin-top:14px;">
+        <button style="background:#22c55e;color:#0a0b0d;border:none;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;">맞아요, 확정할게요</button>
+        <button style="background:transparent;color:#9aa1ac;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:9px 16px;font-size:13px;cursor:pointer;">보류</button>
+      </div>
+    </div>
+
+    <div style="background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+        <div style="font-weight:700;font-size:16px;">대용량 커밋 리스트 렌더링 지연</div>
+        <span style="background:rgba(34,197,94,0.15);color:#22c55e;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;white-space:nowrap;">사용자 확인 완료</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:14px;line-height:1.7;">
+        <div><span style="color:#6b7280;">문제 상황 추정 — </span><span style="color:#c3c8cf;">커밋 수가 많은 저장소에서 화면이 느려지는 문제가 있었던 것으로 보입니다.</span></div>
+        <div><span style="color:#6b7280;">최종 해결 방법 — </span><span style="color:#c3c8cf;">리스트에 가상 스크롤을 적용해 DOM 노드 수를 줄였습니다.</span></div>
+      </div>
+      <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08);font-size:13px;color:#6b7280;">
+        관련 커밋: <a href="#">e83fa01</a>, <a href="#">11cba30</a>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="motion.js"></script>
+</body>
+</html>

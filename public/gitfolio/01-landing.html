@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gitfolio</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+body{margin:0;background:#0a0b0d;word-break:keep-all;overflow-wrap:break-word;}
+a{color:#22c55e;text-decoration:none;}
+a:hover{color:#4ade80;}
+</style>
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+<div style="font-family:Pretendard,-apple-system,sans-serif;background:#0a0b0d;color:#f2f3f5;min-height:100vh;">
+  <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;background:rgba(10,11,13,0.9);backdrop-filter:blur(8px);z-index:10;">
+    <div style="font-size:20px;font-weight:800;letter-spacing:-0.02em;">Gitfolio</div>
+    <nav style="display:flex;gap:32px;font-size:14px;color:#9aa1ac;">
+      <a href="#how">작동방식</a><a href="#ai">AI 분석</a><a href="#privacy">개인정보</a><a href="#faq">FAQ</a>
+    </nav>
+    <button style="background:#22c55e;color:#0a0b0d;border:none;border-radius:8px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;">GitHub로 시작하기</button>
+  </header>
+
+  <section style="padding:120px 48px 100px;text-align:center;position:relative;overflow:hidden;">
+    <svg width="220" height="320" style="position:absolute;left:40px;top:60px;opacity:0.5;" viewBox="0 0 220 320"><path d="M60 20 C120 60 40 140 100 180 C160 220 90 280 130 300" stroke="#22c55e" stroke-width="1.5" fill="none" opacity="0.5"/><circle cx="60" cy="20" r="4" fill="#22c55e"/><circle cx="130" cy="300" r="4" fill="#22c55e"/></svg>
+    <svg width="220" height="320" style="position:absolute;right:40px;top:60px;opacity:0.5;" viewBox="0 0 220 320"><path d="M160 20 C100 60 180 140 120 180 C60 220 130 280 90 300" stroke="#22c55e" stroke-width="1.5" fill="none" opacity="0.5"/><circle cx="160" cy="20" r="4" fill="#22c55e"/><circle cx="90" cy="300" r="4" fill="#22c55e"/></svg>
+    <div style="font-size:15px;color:#6b7280;letter-spacing:0.02em;margin-bottom:20px;">GITHUB 커밋 분석 서비스</div>
+    <h1 style="font-size:52px;font-weight:800;line-height:1.3;margin:0 auto 24px;max-width:760px;letter-spacing:-0.02em;">기억나지 않는 개발 과정,<br>커밋에서 다시 찾아드립니다</h1>
+    <p style="font-size:17px;color:#9aa1ac;max-width:600px;margin:0 auto 36px;line-height:1.7;">Gitfolio는 불완전한 커밋 메시지 대신 실제 코드 변경을 분석합니다.<br>오래된 저장소의 모든 커밋을 확인해 기능 구현, 구조 변경, 오류 수정과<br>트러블슈팅 과정을 기간별로 복원합니다.</p>
+    <button style="background:#22c55e;color:#0a0b0d;border:none;border-radius:8px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;">지금 바로 시작하기</button>
+  </section>
+
+  <section style="padding:80px 48px;border-top:1px solid rgba(255,255,255,0.08);">
+    <div style="max-width:1040px;margin:0 auto;">
+      <div style="font-size:13px;color:#22c55e;font-weight:700;margin-bottom:12px;">문제 정의</div>
+      <h2 style="font-size:30px;font-weight:700;margin:0 0 40px;letter-spacing:-0.01em;">이런 프로젝트, 익숙하지 않나요</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;">
+        <div style="background:#15171c;padding:28px;">커밋을 한 번에 몰아서 작성함</div>
+        <div style="background:#15171c;padding:28px;">커밋 메시지를 "수정", "완료", "fix"처럼 불명확하게 작성함</div>
+        <div style="background:#15171c;padding:28px;">README와 개발 문서를 체계적으로 작성하지 않음</div>
+        <div style="background:#15171c;padding:28px;">시간이 지나 구현 과정과 기술적 문제를 기억하기 어려움</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="padding:80px 48px;border-top:1px solid rgba(255,255,255,0.08);;scroll-margin-top:88px;">
+    <div style="max-width:1040px;margin:0 auto;">
+      <div style="font-size:13px;color:#22c55e;font-weight:700;margin-bottom:12px;">작동 방식</div>
+      <h2 style="font-size:30px;font-weight:700;margin:0 0 40px;letter-spacing:-0.01em;">레포 링크 하나만 주세요,<br>그 다음은 Gitfolio가 합니다</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+        <div style="background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:rgba(34,197,94,0.15);color:#22c55e;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:16px;">1</div>
+          <div style="font-weight:700;margin-bottom:8px;">저장소 연결</div>
+          <div style="font-size:14px;color:#9aa1ac;line-height:1.6;">GitHub 로그인 후 분석할 저장소와 기간을 선택합니다.</div>
+        </div>
+        <div style="background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:rgba(34,197,94,0.15);color:#22c55e;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:16px;">2</div>
+          <div style="font-weight:700;margin-bottom:8px;">AI 커밋 분석</div>
+          <div style="font-size:14px;color:#9aa1ac;line-height:1.6;">각 커밋에서 실제로 변경된 코드를 기준으로 무엇이 바뀌었는지 찾아냅니다.</div>
+        </div>
+        <div style="background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:rgba(34,197,94,0.15);color:#22c55e;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:16px;">3</div>
+          <div style="font-weight:700;margin-bottom:8px;">기간별 복원</div>
+          <div style="font-size:14px;color:#9aa1ac;line-height:1.6;">기간순으로 정렬해 트러블슈팅 포인트와 문제 해결 과정을 보여드립니다.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai" style="padding:80px 48px;border-top:1px solid rgba(255,255,255,0.08);;scroll-margin-top:88px;">
+    <div style="max-width:1040px;margin:0 auto;">
+      <div style="font-size:13px;color:#22c55e;font-weight:700;margin-bottom:12px;">AI 모델 오케스트레이션</div>
+      <h2 style="font-size:30px;font-weight:700;margin:0 0 16px;letter-spacing:-0.01em;">작은 변경점은 빠르게, 큰 변경점은 꼼꼼히</h2>
+      <p style="font-size:15px;color:#9aa1ac;line-height:1.7;margin:0 0 32px;max-width:640px;">코드 변경량과 복잡도를 먼저 계산한 뒤 적합한 AI 모델을 자동으로 배정합니다.<br>복잡한 연산이 꼭 필요한 부분에서만 고급 모델을 이용해 비용 부담을 줄여드려요.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+        <div style="background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px;">
+          <div style="font-size:12px;font-weight:700;color:#9aa1ac;margin-bottom:10px;">가성비 모델</div>
+          <div style="font-size:14px;color:#f2f3f5;">오타 수정, 변수명 변경, 단순 UI 수정</div>
+        </div>
+        <div style="background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px;">
+          <div style="font-size:12px;font-weight:700;color:#9aa1ac;margin-bottom:10px;">중간 모델</div>
+          <div style="font-size:14px;color:#f2f3f5;">단일 기능 구현, API 연결, 리팩터링</div>
+        </div>
+        <div style="background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px;">
+          <div style="font-size:12px;font-weight:700;color:#9aa1ac;margin-bottom:10px;">고급 모델</div>
+          <div style="font-size:14px;color:#f2f3f5;">아키텍처 변경, 인증/보안 로직, 복잡한 오류 해결</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy" style="padding:80px 48px;border-top:1px solid rgba(255,255,255,0.08);;scroll-margin-top:88px;">
+    <div style="max-width:1040px;margin:0 auto;">
+      <div style="font-size:13px;color:#22c55e;font-weight:700;margin-bottom:12px;">개인정보 및 코드 처리</div>
+      <h2 style="font-size:30px;font-weight:700;margin:0 0 40px;letter-spacing:-0.01em;">비공개 저장소는 나만 볼 수 있어요</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;font-size:14px;color:#c3c8cf;">
+        <div style="display:flex;gap:10px;"><span style="color:#22c55e;">✓</span>GitHub OAuth를 통해서만 로그인, 비밀번호는 수집하지 않습니다</div>
+        <div style="display:flex;gap:10px;"><span style="color:#22c55e;">✓</span>Secret, API Key, 환경변수는 AI 전송 전 탐지 및 마스킹됩니다</div>
+        <div style="display:flex;gap:10px;"><span style="color:#22c55e;">✓</span>사용자 코드를 AI 학습 데이터로 사용하지 않습니다</div>
+        <div style="display:flex;gap:10px;"><span style="color:#22c55e;">✓</span>분석 완료 후 코드 원문 자동 삭제 옵션을 제공합니다</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding:80px 48px;border-top:1px solid rgba(255,255,255,0.08);;scroll-margin-top:88px;">
+    <div style="max-width:760px;margin:0 auto;">
+      <div style="font-size:13px;color:#22c55e;font-weight:700;margin-bottom:12px;">자주 묻는 질문</div>
+      <h2 style="font-size:30px;font-weight:700;margin:0 0 32px;letter-spacing:-0.01em;">FAQ</h2>
+      <div style="display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;">
+        <div style="background:#15171c;padding:20px 24px;">
+          <div style="font-weight:700;margin-bottom:6px;">비공개 저장소도 분석할 수 있나요?</div>
+          <div style="font-size:14px;color:#9aa1ac;">네, 사용자가 권한을 승인한 비공개 저장소는 본인만 열람 가능한 상태로 분석됩니다.</div>
+        </div>
+        <div style="background:#15171c;padding:20px 24px;">
+          <div style="font-weight:700;margin-bottom:6px;">다른 사람이 제 분석 결과를 볼 수 있나요?</div>
+          <div style="font-size:14px;color:#9aa1ac;">아니요. 분석 결과는 기본적으로 모두 비공개이며, 외부 공개 포트폴리오 페이지는 제공하지 않습니다.</div>
+        </div>
+        <div style="background:#15171c;padding:20px 24px;">
+          <div style="font-weight:700;margin-bottom:6px;">이미 분석한 저장소를 다시 보면 또 결제하나요?</div>
+          <div style="font-size:14px;color:#9aa1ac;">동일한 분석 결과를 재조회하는 것은 추가 결제가 없습니다. 분석 범위를 확장할 때만 추가 비용이 발생합니다.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;color:#6b7280;font-size:13px;">
+    <div>© 2026 Gitfolio</div>
+    <div style="display:flex;gap:24px;"><a href="#">이용약관</a><a href="#">개인정보처리방침</a></div>
+  </footer>
+</div>
+<script src="motion.js"></script>
+</body>
+</html>
