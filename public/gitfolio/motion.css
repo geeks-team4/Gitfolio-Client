@@ -1,0 +1,353 @@
+:root {
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --motion-fast: 180ms;
+  --motion-base: 680ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body { opacity: 1; }
+body.ux-font-small .ux-code-text { font-size: 12px !important; }
+body.ux-font-medium .ux-code-text { font-size: 14px !important; }
+body.ux-font-large .ux-code-text { font-size: 17px !important; }
+
+.motion-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(3px);
+  transition:
+    opacity var(--motion-base) ease,
+    transform var(--motion-base) var(--motion-ease),
+    filter var(--motion-base) ease;
+  transition-delay: var(--motion-delay, 0ms);
+}
+
+.motion-reveal.motion-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.motion-card {
+  transition:
+    transform 260ms var(--motion-ease),
+    border-color 260ms ease,
+    background-color 260ms ease,
+    box-shadow 260ms ease !important;
+}
+
+.motion-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,.18) !important;
+  box-shadow: 0 16px 42px rgba(0,0,0,.28);
+}
+
+.motion-card.ux-enter {
+  animation: ux-card-enter 520ms var(--motion-ease) both;
+  animation-delay: var(--ux-enter-delay, 0ms);
+}
+
+@keyframes ux-card-enter {
+  from { opacity: 0; transform: translateY(14px) scale(.985); }
+}
+
+.ux-analysis-enter {
+  animation: ux-analysis-enter 520ms var(--motion-ease) both;
+  animation-delay: var(--ux-enter-delay, 0ms);
+}
+
+@keyframes ux-analysis-enter {
+  from { opacity: 0; transform: translateY(12px); }
+}
+
+a, button, [role="button"] {
+  transition:
+    transform var(--motion-fast) var(--motion-ease),
+    color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    opacity var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease !important;
+}
+
+a:hover, button:hover, [role="button"]:hover {
+  transform: translateY(-1px);
+}
+
+a:active, button:active, [role="button"]:active {
+  transform: scale(.97);
+}
+
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
+  outline: 2px solid #fafafa;
+  outline-offset: 3px;
+}
+
+header {
+  transition: background-color 240ms ease, box-shadow 240ms ease !important;
+}
+
+header.motion-scrolled {
+  box-shadow: 0 10px 32px rgba(0,0,0,.28);
+}
+
+aside {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  align-self: flex-start;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+body.gitfolio-embedded aside { display: none !important; }
+body.gitfolio-embedded > div { min-width: 0; }
+body.gitfolio-embedded main { width: 100%; box-sizing: border-box; }
+
+aside > :last-child {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+aside > :last-child > :first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a0a0a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+aside > :last-child > :first-child::after {
+  content: "Y";
+}
+
+header nav a {
+  color: #a3a3a3;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+header nav a:hover {
+  color: #fafafa;
+}
+
+.ux-toggle {
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 220ms ease, box-shadow 220ms ease !important;
+}
+
+.ux-toggle:focus-visible {
+  outline: 2px solid #fafafa;
+  outline-offset: 3px;
+}
+
+.ux-toggle > div {
+  transition: left 220ms var(--motion-ease), right 220ms var(--motion-ease), transform 220ms var(--motion-ease) !important;
+}
+
+.ux-toggle[aria-checked="true"] {
+  background: #3b82f6 !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), 0 0 0 3px rgba(59,130,246,.14);
+}
+
+.ux-toggle[aria-checked="false"] {
+  background: #33363b !important;
+}
+
+.ux-choice {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease !important;
+}
+
+.ux-choice:not(.ux-selected) {
+  background: #111 !important;
+  border-color: rgba(255,255,255,.10) !important;
+  color: #a3a3a3 !important;
+  font-weight: 500 !important;
+}
+
+.ux-choice.ux-selected {
+  background: rgba(59,130,246,.14) !important;
+  border-color: #3b82f6 !important;
+  color: #fafafa !important;
+  font-weight: 700 !important;
+}
+
+input[type="radio"], input[type="checkbox"] { accent-color: #3b82f6 !important; }
+input[type="radio"]:focus, input[type="checkbox"]:focus { outline: none; }
+
+.ux-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 9999;
+  transform: translate(-50%, 18px);
+  opacity: 0;
+  pointer-events: none;
+  padding: 12px 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 10px;
+  background: rgba(30,30,30,.96);
+  color: #fafafa;
+  font: 600 13px Pretendard, sans-serif;
+  box-shadow: 0 14px 44px rgba(0,0,0,.4);
+  transition: opacity 220ms ease, transform 220ms var(--motion-ease);
+}
+
+.ux-toast.ux-show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.ux-busy { opacity: .6; pointer-events: none; }
+
+.ux-file-link {
+  cursor: pointer;
+}
+
+.ux-file-link > :first-child {
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,.28);
+  text-underline-offset: 4px;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.ux-file-link:hover > :first-child {
+  color: #58a6ff;
+  text-decoration-color: #58a6ff;
+}
+
+.ux-dialog-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0,0,0,.62);
+  backdrop-filter: blur(4px);
+}
+
+.ux-dialog {
+  width: min(520px, 100%);
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  background: #1b1b1d;
+  color: #fafafa;
+  box-shadow: 0 24px 80px rgba(0,0,0,.5);
+  animation: ux-sheet-in 220ms var(--motion-ease) both;
+}
+
+.ux-dialog h2 { margin: 0 0 8px; font-size: 17px; }
+.ux-dialog p { margin: 0 0 20px; color: #a3a3a3; font-size: 14px; line-height: 1.6; }
+.ux-dialog-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ux-dialog-actions button { padding: 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: transparent; color: #fafafa; font-weight: 700; cursor: pointer; }
+.ux-dialog-actions button:last-child { background: #ef4444; border-color: #ef4444; color: #fff; }
+
+@keyframes ux-sheet-in { from { opacity: 0; transform: translateY(24px); } }
+
+.motion-progress {
+  transform-origin: left center;
+  animation: motion-progress 900ms var(--motion-ease) both;
+  animation-delay: var(--motion-delay, 180ms);
+}
+
+svg path, svg circle, svg rect {
+  transition: stroke 240ms ease, fill 240ms ease, opacity 240ms ease;
+}
+
+@keyframes motion-progress {
+  from { transform: scaleX(0); opacity: .4; }
+  to { transform: scaleX(1); opacity: 1; }
+}
+
+.onboarding-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(420px circle at var(--pointer-x, 50%) var(--pointer-y, 42%), rgba(59,130,246,.12), transparent 66%);
+  opacity: .9;
+  transition: opacity 300ms ease;
+}
+
+.onboarding-hero > * { position: relative; z-index: 1; }
+
+.onboarding-logo {
+  animation: onboarding-float 4.2s ease-in-out infinite;
+  transition: transform 450ms var(--motion-ease), filter 250ms ease;
+  will-change: transform;
+}
+
+.onboarding-logo:hover {
+  filter: drop-shadow(0 20px 48px rgba(59,130,246,.28)) brightness(1.08) !important;
+}
+
+.onboarding-orbit {
+  transition: translate 600ms var(--motion-ease), opacity 250ms ease;
+  will-change: translate;
+}
+
+.onboarding-tilt {
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease !important;
+  will-change: transform;
+}
+
+.onboarding-tilt:hover {
+  border-color: rgba(255,255,255,.18) !important;
+  box-shadow: 0 20px 54px rgba(0,0,0,.28), inset 0 1px rgba(255,255,255,.04);
+}
+
+.onboarding-cta {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  isolation: isolate;
+  contain: paint;
+  transition: transform 180ms var(--motion-ease), box-shadow 180ms ease !important;
+}
+
+.onboarding-cta:hover {
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: 0 14px 36px rgba(255,255,255,.13);
+}
+
+.onboarding-cta:active { transform: translateY(0) scale(.98); }
+
+@keyframes onboarding-float {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@media (max-width: 760px) {
+  .motion-reveal { transform: translateY(14px); }
+  .motion-card:hover { transform: none; box-shadow: none; }
+  aside { position: relative; height: auto; }
+  .onboarding-orbit { opacity: .18 !important; }
+  .onboarding-tilt:hover { transform: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+  body, .motion-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gitfolio</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>body{margin:0;background:#0a0b0d;word-break:keep-all;overflow-wrap:break-word;} a{color:#22c55e;text-decoration:none;} a:hover{color:#4ade80;} input[type=radio]{accent-color:#22c55e;} input[type=checkbox]{accent-color:#22c55e;}</style>
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+<div style="font-family:Pretendard,-apple-system,sans-serif;background:#0a0b0d;color:#f2f3f5;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px;">
+  <div style="width:460px;background:#15171c;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px;">
+    <div style="font-size:13px;color:#6b7280;margin-bottom:6px;">결제</div>
+    <h1 style="font-size:20px;font-weight:800;margin:0 0 24px;">order-service 분석 결제</h1>
+
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="display:flex;justify-content:space-between;"><span style="color:#9aa1ac;">저장소</span><span>order-service</span></div>
+      <div style="display:flex;justify-content:space-between;"><span style="color:#9aa1ac;">분석 기간</span><span>전체 기간</span></div>
+      <div style="display:flex;justify-content:space-between;"><span style="color:#9aa1ac;">분석 커밋 수</span><span>1,204개</span></div>
+      <div style="display:flex;justify-content:space-between;"><span style="color:#9aa1ac;">코드 변경량</span><span>+41.0k / -12.8k</span></div>
+      <div style="display:flex;justify-content:space-between;"><span style="color:#9aa1ac;">예상 분석 시간</span><span>약 24분</span></div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+      <span style="font-size:15px;font-weight:700;">최종 결제 금액</span>
+      <span style="font-size:26px;font-weight:800;">₩29,600</span>
+    </div>
+
+    <div style="font-size:13px;font-weight:700;color:#9aa1ac;margin-bottom:12px;">결제 수단</div>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
+      <label style="display:flex;align-items:center;gap:10px;background:rgba(34,197,94,0.1);border:1px solid #22c55e;border-radius:10px;padding:14px 16px;font-size:14px;"><input type="radio" checked>신용/체크카드</label>
+      <label style="display:flex;align-items:center;gap:10px;background:#0e0f12;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;font-size:14px;color:#9aa1ac;"><input type="radio">보유 크레딧 (₩32,400)</label>
+    </div>
+
+    <label style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:#9aa1ac;line-height:1.6;margin-bottom:20px;">
+      <input type="checkbox" checked style="margin-top:2px;">
+      <span>결제 약관에 동의합니다. 동일한 분석 결과 재조회는 추가 결제가 없으며, 서비스 오류로 분석에 실패하면 자동 재분석 또는 환불됩니다.</span>
+    </label>
+
+    <button style="width:100%;background:#22c55e;color:#0a0b0d;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:700;cursor:pointer;">₩29,600 결제하고 분석 시작</button>
+  </div>
+</div>
+<script src="motion.js"></script>
+</body>
+</html>
